@@ -1,0 +1,27 @@
+Okunacaklar
+
+css box model
+https://www.w3schools.com/css/css_boxmodel.asp
+
+css position
+https://www.w3schools.com/css/css_positioning.asp
+
+
+İki kutu hikayesi
+https://www.youtube.com/watch?v=OaEtW_CSaPk
+
+* GITHUB PROFİLİ AÇ!!!!!!!!!
+1) 2 adet ul  tanımla ve içerisine en az 5 item olarak doldur.
+2) 2 table aç ve içerisine en az 5 item olarak doldur.
+3) 2 adet img koy ve boyutlarını 100 * 100 yap.
+4) 2 adet a href koy birini yeni sekmeye yönlendir.
+5) Ekrana 2 adet h1 ve 2 adet p koy
+6) Html elementler nelerdir? https://www.w3schools.com/html/html_elements.asp
+7) Ekrana 100*100 bir div koy ve background color red yap
+8) Ekrana 100*100 iki tane div koy. Bu divlerin farklı renklerde border özelliği olsun.
+9) Ekrana 100*100 iki tane div koy. Bu divleri yanyana getir. float, table ve kullan
+10) iki tane spanı alt alta getir?
+11) OPSİYONEL => aşağıdaki tasarımı ÇIKART!
+https://jolly-kalam-23776e.netlify.app/cssgridresponsive/
+
+
