@@ -8,6 +8,19 @@ https://code.tutsplus.com/en/tutorials/the-30-css-selectors-you-must-memorize--n
 https://www.w3schools.com/css/default.asp
 
 
+Chrome Ext
+CSS Viewer
+WhatFont
+Page Ruler
+ColorZilla
+Image Downloader
+Corporate Ipsum
+Lightshot
+Fake Filler
+Debug CSS
+
+
+
 
 
 
