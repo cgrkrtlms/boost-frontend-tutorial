@@ -7,6 +7,11 @@ https://www.w3schools.com/cssref/css_selectors.asp
 https://code.tutsplus.com/en/tutorials/the-30-css-selectors-you-must-memorize--net-16048
 https://www.w3schools.com/css/default.asp
 
+Js Style guide
+https://www.w3schools.com/js/js_conventions.asp
+
+
+
 
 Chrome Ext
 CSS Viewer

@@ -1,0 +1,24 @@
+
+1) bir numeric, bir string, bir boolean değişken tanımla
+2) numeric ve string 5 elemanlı 2 dizi tanımla
+3) name, unitPrice, stock özellikleri olan bir obje tanımla ve objeyi doldur
+4) yukarıdaki tanımladığın objeden 5 tane daha oluştur ve bir dizide push et
+5) oluşturduğun dizide kaç eleman var console a yazdır
+6) oluşturduğun dizinin son elemanını çıkar
+7) oluşturduğun dizinin ilk elemanını çıkar
+8) oluşturduğun dizide name alanı 'samsung' olan elemanı bulup console yazdır ( js find komutu)
+9) oluştrudğun dizide unitPrice 100 den büyük olanları ekrana yazdır ( js filter komutu )
+
+
+*******
+
+10) ekrana 2 input ve hesap butonlarını koy (çarpma bölme çıkarma ve toplama) hangi butona basarsa o işlemi yapıp alert olarak ekrana yazdır
+11) Ekrana bir table ve bir buton koy. ( en az 5 satırlı) Butona tıklandığında 3. satırı silsin
+12) Ekrana bir buton koy. Butona her tıklandığında 100-500 arası rastgele bir width değerini kendine atasın ( js random!!)
+13) Ekrana bir input bir buton koy. Butona tıkladığında inputtan aldığı renk değerini body background a atasın. eğer atama yapamazsa ekrana uyarı versin ***
+13) Ekrana 3 buton koy. Hangi butona tıklanırsa o buton kendini yoketsin (her butona ayrı ayrı onclikc function yazacaksın??, display none yapmak!)
+
+
+
+opsiyonel
+js foreach ve map arasındaki fark nedir?

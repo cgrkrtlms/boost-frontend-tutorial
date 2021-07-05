@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Sayaç: <span id='sonuc'>0</span></h1>
+    <h1>KDV li hali: <span id='sonuckdv'>0</span></h1>
+
+
+    <div>
+        <label for="">Sayı</label>
+        <input type="text" name="" id="sayi">
+    </div>
+    <div>
+        <button onclick="arttir()">Arttır</button>
+        <button onclick="goster()">KDV Hesapla</button>
+    </div>
+
+</body>
+
+</html>
+<script>
+
+//null, undefined, NaN
+    //bu fonksiyon çalıştığında inputtan değeri alır ve kdv sini hesaplayıp span a yazar
+    function goster() {
+
+
+        //inputtaki değeri aldım
+        let inputvalue = Number(document.getElementById('sayi').value);
+
+        let sonuc = inputvalue * 1.18;
+
+        document.getElementById('sonuckdv').innerHTML = sonuc;
+
+    }
+
+
+    let sayac = 0;
+    function arttir() {
+
+        sayac++;
+
+        document.getElementById('sonuc').innerHTML = sayac;
+
+    }
+
+</script>
