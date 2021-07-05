@@ -17,8 +17,11 @@
 12) Ekrana bir buton koy. Butona her tıklandığında 100-500 arası rastgele bir width değerini kendine atasın ( js random!!)
 13) Ekrana bir input bir buton koy. Butona tıkladığında inputtan aldığı renk değerini body background a atasın. eğer atama yapamazsa ekrana uyarı versin ***
 13) Ekrana 3 buton koy. Hangi butona tıklanırsa o buton kendini yoketsin (her butona ayrı ayrı onclikc function yazacaksın??, display none yapmak!)
+14) Ekrana bir buton 6 tane de label koy. Butona tıkladığında 1 ile 49 arasında rastgele 6 sayı üretip bunları tek tek labellara yazsın. Sayısal loto programı ( aynı sayı olmamalı )
 
 
 
 opsiyonel
 js foreach ve map arasındaki fark nedir?
+
+JS addeventlistener nedir????
