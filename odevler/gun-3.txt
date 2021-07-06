@@ -22,6 +22,6 @@
 
 
 opsiyonel
-js foreach ve map arasındaki fark nedir?
 
-JS addeventlistener nedir????
+
+ 

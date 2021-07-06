@@ -26,6 +26,10 @@
 </html>
 <script>
 
+    //önce ekran tasarımını yapıp inputlara id lerimi verdim
+    //sonra butonun onclick function tanımladım ve function ı boş bir şekilde aşağıya yazdım
+    //inputlarımdaki dataları aldım
+
     function add() {
 
         //butona bastıktan sonra servise kategori objesini bırakacağım. POST işlemi yapılacak
@@ -49,6 +53,9 @@
             //js objesini json a çevirir
             body: JSON.stringify(newCategory)
         }
+
+
+    
 
         fetch('https://northwind.vercel.app/api/categories', requestOptions)
         .then((res) => res.json())

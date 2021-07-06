@@ -19,6 +19,13 @@ search işlemi yapıp console a veya dilediğin yere datayı yazdırsın.
 7) Ekrana bir buton koy. Butona tıkladığında sadece ilk 5 suppleri console a yazdır.
 8) Ekrana bir buton koy. Butona tıkladığında unitPrice 100 den büyük olan dataları console a yazdır.
 9) Ekrana bir buton koy butona tıklandığında discontiuned true olan kaç ürün var console a yazdır
+10) Ekrana bir buton koy. Butona tıklandığında çekilen kategorilerin ismini büyük olarak console a yazdır.
+11) Ekrana bir buton koy. Butona tıklandığında çekilen kategorilerin ismini küçük olarak console a yazdır.
+12) Ekrana bir buton koy. Butona tıklandığında çekilen kategorilerin isminin ilk harfini console a yazdır.
+13) Ekrana bir buton koy. Butona tıklandığında çekilen kategorilerin isminin ilk iki harfini console a yazdır.
+14) Ekrana bir buton koy. Butona tıklandığında çekilen ÜRÜNLERİN fiyatlarının %18 ini console a yazdır
+
+
 
 not: 5 ve 6. sorular için lodash isimli ek kütüphane kullanabilirsin
 

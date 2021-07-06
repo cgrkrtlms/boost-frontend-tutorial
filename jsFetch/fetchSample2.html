@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id='products'>
+        <tr>
+            <td>Name</td>
+            <td>Unit Price</td>
+        </tr>
+
+        <!-- <tr>
+            <td>Iphone</td>
+            <td>5000</td>
+        </tr> -->
+
+        
+
+    </table>
+</body>
+</html>
+<script>
+
+//mevcut url e bir get isteği attım. Daha sonra dönen response un body sinden datayı yakaladım ve console a yazdırdım
+    fetch('https://northwind.vercel.app/api/products')
+    .then((res) => res.json())
+    .then((data) => {
+        
+        let ndata = data.slice(0,5);
+        //map, for, foreach
+        ndata.map((item) => {
+
+            //Önce boş bir satır oluşturdum
+            let newtr = document.createElement('tr');
+
+            //sonra satırın içerisine gelecek olan 2 td yi oluşturup içerisini doldurdum
+            let tdName = document.createElement('td'); 
+            let tdUnitPrice = document.createElement('td');
+            tdName.innerHTML = item.name;
+            tdUnitPrice.innerHTML = item.unitPrice;
+
+            //son olarak oluşturduğum hücreleri satıra, satırı ise tabloya ekledim
+            newtr.appendChild(tdName);
+            newtr.appendChild(tdUnitPrice);
+
+            document.getElementById('products').appendChild(newtr);
+
+        })
+    })
+
+</script>
