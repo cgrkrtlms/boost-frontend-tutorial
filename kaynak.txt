@@ -10,6 +10,9 @@ https://www.w3schools.com/css/default.asp
 Js Style guide
 https://www.w3schools.com/js/js_conventions.asp
 
+JS Promise
+https://javascript.info/
+
 
 
 

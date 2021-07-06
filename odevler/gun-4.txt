@@ -1,0 +1,5 @@
+1) http nedir?
+2) json nedir? 
+3) Restful servis nedir?
+4) callback nedir?
+5) w3 schools arrow function

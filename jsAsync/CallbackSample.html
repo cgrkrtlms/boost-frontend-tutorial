@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+
+    function calc(x, y, myCallBack, callbackReject) {
+        try {
+
+            //öncelikle x ve y üzerindeki işlemler yapılır.
+            let z = x + y;
+
+           // throw 'hata meydana geldi'
+            myCallBack(z);
+
+        } catch (error) {
+            callbackReject(error);
+        }
+    }
+
+    calc(5, 10, mySuccessFunction, myErrorFunction)
+
+
+    function mySuccessFunction(data) {
+        console.log(data);
+    }
+
+    function myErrorFunction(data){
+        console.log(data);
+    }
+
+
+
+
+
+
+</script>

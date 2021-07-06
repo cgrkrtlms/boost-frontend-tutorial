@@ -1,0 +1,24 @@
+local storage
+
+
+
+
+
+
+HTTP kanalına bir istek yaptığımda bana:
+
+* html
+* img
+* json
+
+
+REQUEST <=> RESPONSE  ( sana bir html, json, img vb. bir şey dönüyor )
+
+header ve body den oluşur 
+
+GET
+POST
+PUT
+DELETE
+
+header
