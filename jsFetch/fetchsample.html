@@ -22,13 +22,15 @@
 
     function getData() {
 
+
+
         //fetch default get isteği yapar
         fetch('https://northwind.vercel.app/api/categories')
             .then((res) => res.json())
             .then((data) => {
-                
+
                 data.map((item) => {
-                    
+
                     let newli = document.createElement('li');
                     newli.innerHTML = item.name
                     document.getElementById('categories').appendChild(newli)
@@ -36,6 +38,8 @@
                 });
 
             })
+
+
     }
 
 

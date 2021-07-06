@@ -1,5 +1,36 @@
+Sorular
+
+1) https://northwind.vercel.app/api/products adresinden ürünleri fetch ile çek ve bir table a yazdır. table da en az
+3 kolon olsun
+
+2) https://northwind.vercel.app/api/categories adresinden kategorileri fetch ile çek ve bir table a yazdır en az 2 kolon
+** Yazdırdıktan sonra  herhangi bir tr ye tıklandığın o tr yi tasarımsal olarak uçur
+
+3) en az 5 inputtan oluşan bir yapı tasarla. bu inputtan aldığun verileri products en pointine gönder ve bir post işlemi yap.
+
+4)*** ekrana bir input bir buton koy. butona tıkladığında inputtan aldığı id yi /suppliers endpointinin DELETE komutuna gönder ve datayı
+servisten SİL!!
+
+5)**** 2. soruda oluşturduğun tablonun tepesine bir buton koy. Ona tıklandığında veriler categoryName e göre sıralansın???
+
+6)**** 1. soruda oluşturduğun tablonun tepesine bir input bir button koy. butona tıkladığında inputtaki veriye göre
+search işlemi yapıp console a veya dilediğin yere datayı yazdırsın.
+
+7) Ekrana bir buton koy. Butona tıkladığında sadece ilk 5 suppleri console a yazdır.
+8) Ekrana bir buton koy. Butona tıkladığında unitPrice 100 den büyük olan dataları console a yazdır.
+9) Ekrana bir buton koy butona tıklandığında discontiuned true olan kaç ürün var console a yazdır
+
+not: 5 ve 6. sorular için lodash isimli ek kütüphane kullanabilirsin
+
+
+
+
+
+Araştırılacaklar
+
 1) http nedir?
 2) json nedir? 
 3) Restful servis nedir?
 4) callback nedir?
 5) w3 schools arrow function
+6) http metotlar nelerdir?
