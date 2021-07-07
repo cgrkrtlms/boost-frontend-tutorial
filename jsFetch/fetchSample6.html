@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id='main'>Get Data</button>
+
+</body>
+</html>
+<script>
+
+// 14) Ekrana bir buton koy. Butona tıklandığında çekilen ÜRÜNLERİN fiyatlarının %18 ini console a yazdır
+
+document.getElementById('main').addEventListener('click', function(){
+
+    fetch('https://northwind.vercel.app/api/products')
+    .then((res) => res.json())
+    .then((data) => {
+        
+        data.map((item) => {
+
+            let price = item.unitPrice * 1.18;
+            console.log(price.toFixed(2));
+        })
+
+    })
+
+
+})
+    
+</script>

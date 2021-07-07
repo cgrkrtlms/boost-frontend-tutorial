@@ -13,6 +13,9 @@ https://www.w3schools.com/js/js_conventions.asp
 JS Promise
 https://javascript.info/
 
+JQUERY
+https://www.youtube.com/watch?v=ynG3u3I669o&list=PLWctyKyPphPgqzd2Np8VlKiXhkpAjSV0c
+
 
 
 

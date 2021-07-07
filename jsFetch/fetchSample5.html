@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table id='categories'>
+        <tr>
+            <td>Name</td>
+            <td>Description</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
+<script>
+    //https://northwind.vercel.app/api/categories adresinden kategorileri fetch ile çek ve bir table a yazdır en az 2 kolon
+    // ** Yazdırdıktan sonra  herhangi bir tr ye tıklandığın o tr yi tasarımsal olarak uçur
+
+    fetch('https://northwind.vercel.app/api/categories')
+        .then((res) => res.json())
+        .then((data) => {
+
+            data.map((item) => {
+
+                //Önce boş bir satır oluşturdum
+                let newtr = document.createElement('tr');
+                newtr.className ='bisey';
+
+                //sonra satırın içerisine gelecek olan 2 td yi oluşturup içerisini doldurdum
+                let tdName = document.createElement('td');
+                let tdDescription = document.createElement('td');
+                tdName.innerHTML = item.name;
+                tdDescription.innerHTML = item.description;
+
+                //son olarak oluşturduğum hücreleri satıra, satırı ise tabloya ekledim
+                newtr.appendChild(tdName);
+                newtr.appendChild(tdDescription);
+
+                document.getElementById('categories').appendChild(newtr);
+
+
+                // newtr.addEventListener('click', function(){
+                //     this.style.display = 'none';
+                // })
+
+
+            })
+
+
+        })
+
+
+
+
+</script>

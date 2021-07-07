@@ -29,4 +29,3 @@ JS fetch ( lütfen tüm fecth işlemleri ayrı ayrı yazılsın. copy paste yapm
 19) **  https://northwind.vercel.app/api/orders country değeri USA olan siparişleri console a yazdır
 20) ***** https://northwind.vercel.app/api/orders her bir siparişin TOPLAM tutarını console a yazdır
 21) Ekrana 3 input ve bir buton koy. Butona tıkladığında https://northwind.vercel.app/api/suppliers adresine bir data POST etsin. ( fetch POST işlemi )
-22) 

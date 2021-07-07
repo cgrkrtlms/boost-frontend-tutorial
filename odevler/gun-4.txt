@@ -26,7 +26,6 @@ search işlemi yapıp console a veya dilediğin yere datayı yazdırsın.
 14) Ekrana bir buton koy. Butona tıklandığında çekilen ÜRÜNLERİN fiyatlarının %18 ini console a yazdır
 
 
-
 not: 5 ve 6. sorular için lodash isimli ek kütüphane kullanabilirsin
 
 
