@@ -1,0 +1,3 @@
+1) genel bir css tekrarı yapıp ( w3 schools) sonrasında linkedin üzerinden css sınavına girilmesi ( grup olarak girebilirsiniz )
+2) Jquery videoları tamamlandıysa, genel bir Jquery tekrarı yapıp w3schools üzerinden Jquery sınavına girilmesi ( grup olarak girebilirsiniz)
+3) https://javascript.info/ sitesinin genel incelenmesi
