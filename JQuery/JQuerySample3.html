@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <button id='ackapa'>Aç-Kapa</button>
+
+    <div style="width: 200px; height: 200px; border-style: solid; background-color: cornflowerblue;">
+
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    //butona tıkladığımda kaybolsun bir daha tıklarsam açılsın
+
+    //1. yol
+    // $('#ackapa').click(function(){
+
+    //     let displayValue = $('div').css('display');
+
+    //     if(displayValue == 'block'){
+    //         $('div').css('display','none');
+    //     }
+    //     else{
+    //         $('div').css('display','block');
+    //     }
+
+    // });
+
+
+    //2. yol
+    // let displayStatus = true;
+
+    // $('#ackapa').click(function(){
+
+    //     if(displayStatus){
+    //         $('div').css('display','none');
+    //         displayStatus = false;
+    //     }
+    //     else{
+    //         $('div').css('display','block');
+    //         displayStatus = true;
+    //     }
+
+    // })
+
+    //3. yol
+    $('#ackapa').click(function () {
+        $('div').toggle();
+    })
+
+
+
+</script>

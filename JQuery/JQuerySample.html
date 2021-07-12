@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <button>Hidden</button>
+    <div class="box">
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, inventore quam? Obcaecati, eum natus rerum voluptatem dolore, expedita, recusandae magni sit assumenda optio illo sapiente beatae architecto tempora consequatur earum.
+    </div>
+    
+
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur provident qui omnis impedit, quibusdam perferendis vero, voluptas modi totam eligendi, ea cum. Praesentium aliquam voluptatum vitae, repellendus eum quaerat.
+    </div>
+
+    <div class="box">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam harum molestiae explicabo consequatur, fugiat repellendus expedita! Iusto, ipsam, alias veritatis minus rerum, assumenda ipsa fugiat eligendi dolore suscipit ducimus ex.
+    </div>
+
+
+</body>
+</html>
+
+<script>
+    //butona tıklandığında tüm divleri ortadan kaldır
+
+    $('button').click(function(){
+
+        // $('.box').css('display','none');
+        
+        $('.box').fadeOut(2000)
+
+    })
+
+</script>

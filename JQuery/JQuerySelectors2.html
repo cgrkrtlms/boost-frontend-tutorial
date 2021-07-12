@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+
+    <button>Test - 1</button>
+
+    <button>Test - 2</button>
+
+    <button>Test - 3</button>
+
+    <div id='news'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam, illum aspernatur esse autem unde repellat. Earum, deserunt. Minima blanditiis iste veniam iure aliquid facere laudantium, porro aut nisi nostrum?</div>
+
+
+</body>
+</html>
+<script>
+
+    //herhangi bir butona tıklandığında çalışır. Çalıştığında yukarıdaki div bloğunu ortadan kaldırsın
+    $('button').click(function(){
+
+        // alert('Hello JQuery')
+
+        //css metoduyla yakalanan elemente css özelliği atanır
+        $('#news').css('display','none');
+
+    })
+
+
+</script>
