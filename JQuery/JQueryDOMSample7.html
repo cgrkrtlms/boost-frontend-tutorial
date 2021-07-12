@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div>
+        <input type="text" name="" id="boxVal">
+        <button>Change</button>
+    </div>
+
+    <span>Çağatay Yıldız</span>
+
+    <div id='box' style='width: 200px; height: 200px; background-color: tomato;'>
+
+    </div>
+
+    
+
+</body>
+</html>
+<script>
+    //butona bastığımda inputtaki değeri alıp  id si box olan divin genişlik ve yüksekliğine bu değeri atasın 
+
+    $('button').click(function(){
+
+       // $('span').html('içeriğini değiştirdim. aman da aman.')
+
+       let boxVal =  $('#boxVal').val();
+
+       $('#box').css('width',boxVal);
+       $('#box').css('height',boxVal);
+
+
+    })
+
+</script>

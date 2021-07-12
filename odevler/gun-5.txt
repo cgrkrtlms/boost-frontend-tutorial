@@ -1,6 +1,15 @@
 
 
+1) Ekrana bir input bir buton koy. Butona tıklandığında inputtan aldığı datayı büyük harflerle console a yazsın
+2) Ekrana iki input bir buton koy. Butona tıklandığında inputtan aldığı değerleri çarpıp console a yazdırsın ( Number a çevirebilirsin)
+3) Ekrana bir buton ve bir p elementi koy. Butona tıkladığında p elementinin içeriğine 'Bilge Adam' yazsın
+4) Ekrana bir buton ve bir input koy. Butona tıklandığında inputtan aldığı değeri body arkaplan rengi yapsın
 
+* Ekrana genişliği ve yüksekliği belli olan bir div koy. Arkaplan rengi de olsun. Div üzerine her tıklandığında kendine rastgele bir genişlik ve yükseklik atasın ( 0 - 500 arası)
+ 
+* Ekrana bir buton bir p ve bir span koy. Butona tıkladığında tüm elementleri yok etsin (body içeriğini boşaltabilirsin)
+
+* Ekrana genişliği ve yüksekliği belli olan 3 div koy. Butona tıkladığında rastgele ürettiği bir sayıyı ( 1-500 arasında ) bu divlerin genişlik ve yüksekliğine versin
 
 
 
