@@ -12,5 +12,30 @@
 * Ekrana genişliği ve yüksekliği belli olan 3 div koy. Butona tıkladığında rastgele ürettiği bir sayıyı ( 1-500 arasında ) bu divlerin genişlik ve yüksekliğine versin
 
 
+https://northwind.vercel.app/api/suppliers
+* bu endpoint teki  dataları çekip table a yazdır. 4 kolon yeterlidir
+* bu endpointe bir data POST et ve işlem başarılıysa console a success yazdırsın
+
+*** suppleirs endpointine data ekle FAKAT data eklerken address kısmını da yolla. ve oradaki şehri select üzerinden çeksin
+
+ {
+  
+    "companyName": "Tokyo Traders",
+    "contactName": "Yoshi Nagase",
+    "contactTitle": "Marketing Manager",
+    "address": {
+      "street": "9-8 Sekimai Musashino-shi",
+      "city": "Tokyo",
+      "region": "NULL",
+      "postalCode": 100,
+      "country": "Japan",
+      "phone": "(03) 3555-5011"
+    }
+  }
+
+
+*https://northwind.vercel.app/api/orders
+bu endpointe bir data ekle. Tarih formatı düzgün olmalı ( input:date,datetime gibi formatlara bakabilirsin)
+
 
 * e.prevent default nedir?

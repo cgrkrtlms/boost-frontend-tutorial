@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <style>
+        .row {
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+
+
+    </table>
+</body>
+
+</html>
+<script>
+
+    let url = 'https://northwind.vercel.app/api/categories';
+
+    $.getJSON(url, function (data) {
+
+        data.map((item) => {
+
+            //     $('table').append('<tr class="row">' +
+
+            //         '<td>' + item.id + '</td>' +
+            //         '<td>' + item.name + '</td>' +
+            //         '<td>' + item.description + '</td>' +
+
+            //         '</tr>')
+
+            // })
+
+            // $('table').append(`<tr class="row">`+
+            //     '<td>' + item.id + '</td>' +
+            //     '<td>' + item.name + '</td>' +
+            //     '<td>' + item.description + '</td>' +
+            //     '</tr>')
+
+            $('table').append(`<tr class="row"> 
+                <td> ${item.id} </td>
+                <td> ${item.name} </td>
+                <td> ${item.description} </td>
+                </tr>`)
+
+
+        })
+
+    })
+
+
+    let data = `çağatay yıldız "asdasd" 'asdasdasd'  asfmafslmafslmaslmşfafsl`
+
+</script>

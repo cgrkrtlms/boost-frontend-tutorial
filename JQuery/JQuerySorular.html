@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <style>
+        #main {
+            width: 100px;
+            height: 100px;
+            background-color: teal;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>Test</button>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae minima iure voluptatibus aut voluptatum, ducimus veritatis earum fugiat dolorum delectus, nulla quas quod iste. Dolor, accusamus quo! Aliquid, illum voluptate.</p>
+
+
+    <span>Bilge Adam</span>
+
+    <div id="main">
+
+    </div>
+</body>
+
+</html>
+<script>
+
+    // * Ekrana genişliği ve yüksekliği belli olan bir div koy. Arkaplan rengi de olsun. Div üzerine her tıklandığında kendine rastgele bir genişlik ve yükseklik atasın ( 0 - 500 arası)
+
+
+    $('#main').click(function () {
+
+        //her tıklandığında rastgele x ve y sayılarını oluşturacak.
+        let x = Math.floor(Math.random() * 500);
+        let y = Math.floor(Math.random() * 500);
+
+        $('#main').css('width', x);
+        $('#main').css('height', y);
+
+    })
+
+
+    // * Ekrana bir buton bir p ve bir span koy. Butona tıkladığında tüm elementleri yok etsin (body içeriğini boşaltabilirsin)
+
+    $('button').click(function(){
+        $('*').fadeOut();
+    })
+
+
+</script>

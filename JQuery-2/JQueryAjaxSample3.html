@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div>
+        <label for="">Name:</label>
+        <input type="text" name="" id="productName">
+    </div>
+
+    <div>
+
+        <label for="">Unit Price</label>
+        <input type="text" name="" id="unitPrice">
+
+    </div>
+
+    <div>
+        <label for="">Categories:</label>
+        <select>
+            <option value="1">Confections</option>
+            <option value="2">Produce</option>
+            <option value="3">Seafood</option>
+        </select>
+    </div>
+    <div>
+        <input type="radio" name="discontinued" id="" value="true">
+        <label for="">YES</label>
+        <input type="radio" name="discontinued" id="" value="false">
+        <label for="">NO</label>
+    </div>
+
+    <div>
+        <button>Add</button>
+    </div>
+
+
+</body>
+
+</html>
+<script>
+
+    $('button').click(function () {
+
+        //select içerisindeki option üzerinden value yu yakaladım
+        let categoryId = $('select').val();
+
+        let discontinuedStatus = $('input[name="discontinued"]:checked').val();
+
+        let newProduct = new Object();
+        newProduct.name = $('#productName').val();
+        newProduct.unitPrice = $('#unitPrice').val();
+        newProduct.discontinued = discontinuedStatus;
+        newProduct.categoryId = categoryId;
+
+
+        $.ajax({
+            url:'https://northwind.vercel.app/api/products',
+            type:'POST',
+            data:newProduct,
+            success:function(){
+                console.log('İşlem başarılı!');
+            }
+        })
+
+       
+
+    })
+</script>

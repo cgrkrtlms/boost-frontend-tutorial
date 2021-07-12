@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <span style="display: none; background-color: 'tomato';"> İşlem Başarılı!!</span>
+    <div>
+        <label for="">Category Name:</label>
+        <input type="text" name="" id="categoryName">
+    </div>
+    <div>
+        <label for="">Description:</label>
+        <input type="text" name="" id="categoryDescription">
+    </div>
+    <div>
+        <button>Add</button>
+    </div>
+    <ul>
+
+    </ul>
+
+</body>
+
+</html>
+<script>
+
+
+    //jquery ajax metodu üzerinden servise bir data yollayacağım...!
+
+    $('button').click(function () {
+
+        //buton tıklandığında dataları al ve bir objeye ata;
+
+        //1. yol
+        // let newCategory = {
+        //     name: $('categoryName').val(),
+        //     description: $('categoryDescription').val()
+        // };
+
+        //2. yol
+        let newCategory = new Object();
+        newCategory.name = $('#categoryName').val();
+        newCategory.description = $('#categoryDescription').val();
+
+
+        $.ajax({
+            url: 'https://northwind.vercel.app/api/categories',
+            type: 'POST',
+            data: newCategory,
+            success: function () {
+                console.log('İşlem başarılı');
+
+                $('span').show();
+
+                fillData();
+            },
+            error: function () {
+                console.log('İşlem sırasında bir hata meydana geldi');
+            }
+        })
+
+    })
+
+
+    //bu fonksiyon tetiklendiğinde çekilen datalar ul içerisine dolar
+    function fillData() {
+        $.getJSON('https://northwind.vercel.app/api/categories', function (data) {
+
+            $('ul li').remove();
+
+            data.forEach((item) => {
+
+                $("ul").append('<li>' + item.name + '</li>')
+
+            })
+
+        })
+    }
+
+
+    fillData();
+</script>
