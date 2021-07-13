@@ -10,14 +10,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 </head>
 
 <body>
 
     <div class="jumbotron">
         <h1>Products Page</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia explicabo eos doloremque deserunt nisi
-            dolorum repellendus repellat ex facere ducimus cupiditate, quas a modi quaerat quod non eius in optio.</p>
     </div>
 
     <div class="container">
@@ -30,7 +29,7 @@
             <span style="color: tomato;" id='result'></span>
         </div>
 
-       
+
         <div>
             <span>Display: </span>
             <select name="display" id="">
@@ -74,16 +73,19 @@
 
             products = data;
 
-            let displayData = products.slice(0,5);
+            //kullandığım ek lodash kütüphanesi ile sıralama yaptım
+           // products = _.orderBy(products, ['name'],['desc']);
+
+            let displayData = products.slice(0, 5);
             appendTable(displayData);
 
         });
 
 
-    $('select').change(function(){
+    $('select').change(function () {
         let displayCount = $(this).val();
 
-        let displayData = products.slice(0,displayCount);
+        let displayData = products.slice(0, displayCount);
 
         appendTable(displayData)
     })
@@ -152,23 +154,33 @@
 
     })
 
-    $(document).on('click','#findButton',function(){
+    $(document).on('click', '#findButton', function () {
 
         //butona tıkladığında öncelikle aramak istediği value yakalarım
         let productName = $('#findData').val();
 
         //Daha sonra products dizisindeki elemanlarda bu name control edilir. Varsa spana yazılır yoksa spana 'Sonuç bulunamadı!' yazılır
 
-        let product = products.find(q => q.name.toLowerCase() == productName.toLowerCase());
+        // let product = products.find(q => q.name.toLowerCase() == productName.toLowerCase());
 
-        if(product === undefined){
+        let product = _.find(products, ['name', productName]);
+
+        if (product === undefined) {
             $('#result').html('Sonuç bulunamadı!!')
         }
-        else{
-            $('#result').html('id: ' + product.id + ' name: ' + product.name  +' unitPrice: ' + product.unitPrice)
+        else {
+            $('#result').html('id: ' + product.id + ' name: ' + product.name + ' unitPrice: ' + product.unitPrice);
+
+            let newProducts = [];
+            newProducts.push(product);
+
+            appendTable(newProducts)
         }
 
     })
+
+
+
 
 
 

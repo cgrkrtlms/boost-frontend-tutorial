@@ -1,0 +1,12 @@
+1) customer ekleme formu ( bootstrap, jquery) formda minimum 3 alan olacak companyName, contactName, contactTitle
+2) customerların listelendiği bir table tasarla en az 4 kolon olsun
+3) Listelenen sayfada (2. soruda) kaç customer olduğunu yukarıya bir span içerisine yaz
+
+
+
+* Şehri London olan kaç customer var? console a veya dilediğin yere yazdır.
+
+** Eğer kullanıcının şehri London ise o satır kırmızı olsun
+** Listelerken companyName büyük yazılacak
+** lodash ile isme göre sırala
+** Telefon numaraları 99992139123 şeklinde yani aralarında boşluk veya parantez olmadan yazılacak
