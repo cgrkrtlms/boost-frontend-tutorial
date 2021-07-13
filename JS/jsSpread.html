@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+
+    let countries = ['England', 'Turkey', 'Italy', 'Iran', 'Azerbaycan', 'Kıbrıs', 'Rusya'];
+
+
+    //diziye eleman ekleme
+    countries.push('Greece');
+
+    //diziye yeni bir eleman ekleyeceğim fakat yeni bir dizi istiyorum
+    let newCountries = [];
+    countries.map((item) => {
+        newCountries.push(item);
+    })
+    newCountries.push('Greece');
+
+
+    //spread ...
+
+    let newCountries2 = [...countries, 'Greece'];
+
+    let newCountries3 = ['Greece', ...countries, 'Germany']
+
+
+    let otherCountries = ['Venezuella', 'Şili', 'Küba', 'Kolombiya'];
+    let newCountries4 = [...countries, ...otherCountries];
+
+
+    let webUsers = [
+        {
+            name: 'Çağatay',
+            city: 'Havana'
+        },
+        {
+            name: 'Kaan',
+            city: 'İstanbul'
+        },
+        {
+            name: 'Burcu',
+            city: 'Ankara'
+        }
+    ]
+
+
+    let newWebUsers = [...webUsers, { name: 'Metin', city: 'Berlin' }];
+
+    let data = newWebUsers.find(q => q.name == 'Metin');
+
+    let data2 = newWebUsers[newWebUsers.length - 1];
+
+    console.log(data);
+    console.log(data2);
+
+
+
+</script>

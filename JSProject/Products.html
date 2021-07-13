@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Stock</th>
+                    <th>İşlem</th>
+                </tr>
+            </thead>
+            <tbody>
+
+<button id="5"></button>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+<script>
+
+
+
+
+
+    fetch('https://northwind.vercel.app/api/products')
+        .then((res) => res.json())
+        .then((data) => {
+
+            data.map((item) => {
+
+                $('tbody').append(
+                    '<tr>' +
+                        '<td>' + item.id + '</td>' +
+                        '<td>' + item.name + '</td>' +
+                        '<td>' + item.unitPrice + '</td>' +
+                        '<td>' + item.unitsInStock + '</td>' +
+                        '<td>' + '<button id="' + item.id  +'" class="btn btn-danger"> Delete </button>' + '</td>' +
+                    '</tr>'
+                )
+
+            })
+        });
+
+
+    $(document).on('click', 'button', function () {
+
+        //1. yol fetch ile servise delete işlemi yapıyorum (POST, GET, DELETE, PUT)
+
+        //öncelikle hangi data silinecekse onun id sini alıyorum
+
+        let productId = $(this).attr('id');
+       
+        $(this).parent().parent().fadeOut();
+
+    })
+
+
+
+</script>
