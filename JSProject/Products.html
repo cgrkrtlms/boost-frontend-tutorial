@@ -6,16 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+
+    <div class="jumbotron">
+        <h1>Products Page</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia explicabo eos doloremque deserunt nisi
+            dolorum repellendus repellat ex facere ducimus cupiditate, quas a modi quaerat quod non eius in optio.</p>
+    </div>
+
     <div class="container">
+        <div>
+            <span>Name:</span>
+            <input type="text" name="" id="findData">
+            <button class="btn btn-primary" id='findButton'>Find</button>
+
+            <span>Result: </span>
+            <span style="color: tomato;" id='result'></span>
+        </div>
+
+       
+        <div>
+            <span>Display: </span>
+            <select name="display" id="">
+                <option value="5">5</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+        </div>
 
         <table class="table table-striped">
             <thead>
@@ -29,7 +53,7 @@
             </thead>
             <tbody>
 
-<button id="5"></button>
+
             </tbody>
         </table>
     </div>
@@ -40,37 +64,109 @@
 
 
 
+    let apiurl = 'https://northwind.vercel.app/api/products';
+    let products = [];
 
 
-    fetch('https://northwind.vercel.app/api/products')
+    fetch(apiurl)
         .then((res) => res.json())
         .then((data) => {
 
-            data.map((item) => {
+            products = data;
 
-                $('tbody').append(
-                    '<tr>' +
-                        '<td>' + item.id + '</td>' +
-                        '<td>' + item.name + '</td>' +
-                        '<td>' + item.unitPrice + '</td>' +
-                        '<td>' + item.unitsInStock + '</td>' +
-                        '<td>' + '<button id="' + item.id  +'" class="btn btn-danger"> Delete </button>' + '</td>' +
-                    '</tr>'
-                )
+            let displayData = products.slice(0,5);
+            appendTable(displayData);
 
-            })
         });
+
+
+    $('select').change(function(){
+        let displayCount = $(this).val();
+
+        let displayData = products.slice(0,displayCount);
+
+        appendTable(displayData)
+    })
+
+    function appendTable(data) {
+
+        $('tbody tr').remove();
+
+        data.map((item) => {
+
+            $('tbody').append(
+                '<tr>' +
+                '<td>' + item.id + '</td>' +
+                '<td>' + item.name + '</td>' +
+                '<td>' + item.unitPrice + '</td>' +
+                '<td>' + item.unitsInStock + '</td>' +
+                '<td>' + '<button id="' + item.id + '" class="btn btn-danger"> Delete </button>' + '</td>' +
+                '</tr>'
+            )
+
+        })
+    }
 
 
     $(document).on('click', 'button', function () {
 
+        //öncelikle hangi data silinecekse onun id sini alıyorum
+        let productId = $(this).attr('id');
+
         //1. yol fetch ile servise delete işlemi yapıyorum (POST, GET, DELETE, PUT)
 
-        //öncelikle hangi data silinecekse onun id sini alıyorum
+        // let requestOptions = {
+        //     headers: {
+        //         'Accept': 'application/json',
+        //         'Content-Type': 'application/json'
+        //     },
+        //     method: "DELETE",
+        // }
 
-        let productId = $(this).attr('id');
-       
-        $(this).parent().parent().fadeOut();
+        // fetch(apiurl + '/' + productId, requestOptions)
+        //     .then((res) => res.json())
+        //     .then((data) => {
+        //         console.log('Success!');
+        //         $(this).parent().parent().fadeOut();
+
+        //     })
+        //     .catch((err) => {
+        //         alert(err)
+        //     })
+
+        // 2. yol jquery ajax ile delete işlemi yapıyorum
+
+        let button = this;
+
+        $.ajax({
+            url: apiurl + '/' + productId,
+            type: 'DELETE',
+            success: function () {
+                console.log('Success!');
+                $(button).parent().parent().fadeOut();
+            }
+        })
+
+
+        //REQUEST <=> RESPONSE
+
+    })
+
+    $(document).on('click','#findButton',function(){
+
+        //butona tıkladığında öncelikle aramak istediği value yakalarım
+        let productName = $('#findData').val();
+
+        //Daha sonra products dizisindeki elemanlarda bu name control edilir. Varsa spana yazılır yoksa spana 'Sonuç bulunamadı!' yazılır
+
+        let product = products.find(q => q.name.toLowerCase() == productName.toLowerCase());
+
+        if(product === undefined){
+            $('#result').html('Sonuç bulunamadı!!')
+        }
+        else{
+            $('#result').html('id: ' + product.id + ' name: ' + product.name  +' unitPrice: ' + product.unitPrice)
+        }
 
     })
 
