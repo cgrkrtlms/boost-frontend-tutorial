@@ -1,0 +1,27 @@
+1) w3 schools üzerinden css,js,html ve jquery tekrarlarının yapılması
+
+css antremanları
+* https://www.w3schools.com/css/exercise.asp  ( %50 sini tamamlaman yeterli. dilediğin bölümü seç. dilersen sonrasında linkedin css sınavına gir )
+
+1) genişlik yükseklik ve arka plan rengi verdiğin 3 adet div i flex ile yanyana koy
+2) genişlik yükseklik ve arka plan rengi verdiğin 3 adet div i flex ile ekranın x ve y ekseninde tam ortasına koy
+3) toplamda 12 adet div oluştur 4*3 şeklinde ( 3 sıra 4 sütun ) ekrana koy (  grid ile )
+
+
+js antremanları
+
+https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1 ( hepsini tamamlamaya çalış. dilersen sonrasında linkedin js ınavına gir)
+
+1) en az 5 elemanlı bir obje dizisi tanımla ve sonunda dizideki eleman sayısını console a yazdır. ( objede en az 4 property olsun )
+2) Yukarıdaki dizinin son elemanını sil
+3) Yukarıdaki dizinin ilk elemanını sil
+4) 5 elemanlı bir string dizi tanımla
+5) Yukarıdaki string diziye spread ile yeni bir eleman ekleyip
+6) Yukarıdaki diziye spread ile yeni bir dizi daha ekleyip
+7) Dışarıdan iki sayı alan ve karelerinin toplamını return eden bir ARROW function yazdır ( kaynak: https://www.w3schools.com/js/js_arrow_function.asp)
+8) 10 elemanlı bir sayı dizisi tanımla. Dizideki sayıların toplamını console a yazdır (map, for ve foreach kullanarak ayrı ayrı 3 kez yazdırmalısın. üşenme, küçümseme idman yapmak önemli )
+9) Yukarıdaki dizinin aritmetik ortalamasını console a yazdır
+10) Her 10 saniyede bir console a 1-100 arasında random bir sayı yazdır ( setinterval ile )
+11) sayfa açıldıktan 10 saniye sonra body arka plan rengi kırmızı olsun ( settimeout ile )
+
+
