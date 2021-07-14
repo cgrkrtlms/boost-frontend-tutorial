@@ -74,7 +74,7 @@
             products = data;
 
             //kullandığım ek lodash kütüphanesi ile sıralama yaptım
-           // products = _.orderBy(products, ['name'],['desc']);
+            // products = _.orderBy(products, ['name'],['desc']);
 
             let displayData = products.slice(0, 5);
             appendTable(displayData);
@@ -82,6 +82,7 @@
         });
 
 
+   
     $('select').change(function () {
         let displayCount = $(this).val();
 

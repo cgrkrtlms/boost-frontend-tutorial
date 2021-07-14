@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <span style="display: none; background-color: 'tomato';"> İşlem Başarılı!!</span>
+
+    <div>
+        <label for="">Category Name:</label>
+        <input type="text" name="" id="categoryName">
+    </div>
+    <div>
+        <label for="">Description:</label>
+        <input type="text" name="" id="categoryDescription">
+    </div>
+    <div>
+        <button>Add</button>
+    </div>
+    <ul>
+
+    </ul>
+</body>
+
+</html>
+
+<script>
+
+
+
+    function fillData() {
+
+        $.getJSON('https://northwind.vercel.app/api/categories', function (data) {
+
+            $('ul li').remove();
+
+            data.map((item) => {
+
+                $('ul').append('<li>' + item.name + '</li>')
+
+            })
+
+        })
+
+    }
+
+
+    fillData();
+
+    $('button').click(function () {
+
+        let newCategory = new Object();
+        newCategory.name = $('#categoryName').val();
+        newCategory.description = $('#categoryDescription').val();
+
+
+
+        $.ajax({
+            url: 'https://northwind.vercel.app/api/categories',
+            type: 'POST',
+            data: newCategory,
+            success: function () {
+                console.log('İşlem başarılı');
+                fillData();
+
+
+            }
+
+        })
+
+    })
+
+
+
+</script>
