@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+
+    class Product {
+
+        constructor(name) {
+            this.productName = name;
+        }
+
+        kdvCalc(price) {
+            return price * 1.18;
+        }
+
+    }
+
+    let product = new Product('IPhone');
+
+    let product2 = {
+        name: 'IPhone',
+        kdvCalc: (price) => {
+            return price * 1.18
+        }
+    }
+
+    let product3 = new Object();
+    product3.name = 'IPhone';
+    product3.kdvCalc = function (price) {
+        return price * 1.18;
+    }
+
+
+
+    class bilgeHelper{
+
+        phoneHelper(phone){
+            return hone?.replaceAll(' ','').replaceAll('(','').replaceAll(')','').replaceAll('-','').replaceAll('.','');
+        }
+
+        nameHelper(name){
+            
+        }
+
+    }
+
+    let bilge = new bilgeHelper();
+    bilge.phoneHelper('54333333333')
+
+
+
+
+
+
+</script>

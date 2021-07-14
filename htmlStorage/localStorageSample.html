@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="setStore()">Set Storage</button>
+    <button onclick="clearStore()">Clear</button>
+</body>
+</html>
+<script>
+
+    function setStore(){
+        localStorage.setItem('name','Çağatay');
+        localStorage.setItem('surname','Yıldız')
+    }
+
+    function clearStore(){
+        localStorage.clear();
+    }
+
+</script>

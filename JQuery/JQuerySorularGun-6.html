@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+</head>
+
+<body>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Contact Name</th>
+                <th scope="col">Title</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+        </tbody>
+    </table>
+</body>
+
+</html>
+<script>
+
+    // ** Eğer kullanıcının şehri London ise o satır kırmızı olsun
+
+    // endpoint üzerinden data çekmenin 3 yolunu biliyorum. getjson, ajax ve fetch
+
+    $.getJSON('https://northwind.vercel.app/api/customers', function (data) {
+
+        data.forEach(item => {
+
+            // let color = 'white';
+            // if(item.address?.city == 'London'){
+            //     color='tomato'
+            // }
+
+            let style = '';
+            if (item.address?.city == 'London') {
+                style='style="background-color:tomato"'
+            }
+
+            let newPhone = item.address?.phone?.replaceAll(' ','').replaceAll('(','').replaceAll(')','').replaceAll('-','').replaceAll('.','')
+
+            $('tbody').append(
+                '<tr ' + style + '>' +
+                '<td>' + item.id + '</td>' +
+                '<td>' + item.companyName?.toUpperCase() + '</td>' +
+                '<td>' + newPhone+ '</td>' +
+                '<td>' + item.contactName + '</td>' +
+                '<td>' + item.contactTitle + '</td>' +
+                '<td>' + item.address?.city + '</td>' +
+
+                '</tr>'
+            )
+
+        });
+
+    })
+
+</script>
